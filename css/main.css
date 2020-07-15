@@ -37,7 +37,7 @@ p {
 --------------------------------------------------*/
 .banner {
   position: relative;
-  overflow: hidden;
+/*  overflow: hidden;*/
   height: 50vh;
   background-color: #ffffff;
   background-position: 50% 50%;
