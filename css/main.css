@@ -244,7 +244,7 @@ Large Screen View
 .banner {
   position: relative;
   margin-top: 50px;
-  height: 50vh;
+  height: 300px;
   background-color: #ffffff;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -272,12 +272,14 @@ Large Screen View
   font-size: 6vw;
   font-weight: bold;
   font-variant: small-caps;
+  margin: 0 10px;
 }
 #welcome {
-  font-family: "Swanky and Moo Moo";
+  font-family: "Swanky and Moo Moo", cursive;
   font-size: 10vw;
   font-weight: bold;
   font-variant: small-caps;
+  margin: 0 10px;
 }
 @media screen and (min-width:768px) {
   #shumei-zing {
