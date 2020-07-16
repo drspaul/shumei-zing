@@ -1,0 +1,222 @@
+/* --------------------------------------------------
+Navigation Mobile View Initial
+-------------------------------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav.navigation {
+	display: flex;
+	position: fixed;
+	height: 50px;
+	background-color: #ffffff;
+	z-index: 2;
+}
+div.nav-logo {
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	background-color: #ffffff;
+	color: #555555;
+	font-weight: 900;
+	text-transform: none;
+}
+div.nav-toggle {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 45px;
+	height: 45px;
+	background-color: #ffffff;
+	border: 1px solid #588c7e;
+	border-radius: 5%;
+	cursor: pointer;
+}
+span.icon-bar {
+	display: block;
+	position: absolute;
+	right: 9px;
+	width: 27px;
+	height: 2px;
+	background-color: #ffffff;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+span.icon-bar:nth-child(1) {
+  top: 15px;
+	background-color: #86af49 !important;
+}
+span.icon-bar:nth-child(2) {
+  top: 22px;
+  background-color: #ffcc5c !important;
+}
+span.icon-bar:nth-child(3) {
+  top: 29px;
+  background-color: #c83349 !important;
+}
+
+/* --------------------------------------------------
+Navigation Toggle
+-------------------------------------------------- */
+ul.nav-menu {
+	position: absolute;
+	top: 50px;
+	width: 100vw;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+ul.nav-menu.active {
+	height: auto;
+}
+ul.nav-menu li {
+	width:100vw;
+}
+ul.nav-menu li a {
+	display: block;
+	width: 100vw;
+	height: 50px;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	line-height: 50px;
+	color: #454140FF;
+	border-bottom: 1px solid rgba(69,65,64,.2);
+}
+ul.nav-menu li:nth-child(1) a {
+	background-color: #f0f0f0;
+	border-top: 1px solid rgba(69,65,64,.2);
+}
+ul.nav-menu li:nth-child(2) a {
+	background-color: #c5d5c5;
+}
+ul.nav-menu li:nth-child(3) a {
+	background-color: #9fa9a3;
+}
+ul.nav-menu li:nth-child(4) a {
+	background-color: #e3e0cc;
+}
+ul.nav-menu li:nth-child(5) a {
+	background-color: #b2c2bf;
+}
+ul.nav-menu li a:hover, ul.nav-menu li a:focus {
+	color: #ffffff !important;
+	font-weight: 700;
+  background-color: #c83349;
+}
+ul.nav-menu li a:focus {
+  outline: none;
+}
+.nav-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.nav-overlay.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* --------------------------------------------------
+Icon Bars Animation
+-------------------------------------------------- */
+.nav-toggle.active .icon-bar:nth-child(1) {
+	top: 24px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.nav-toggle.active .icon-bar:nth-child(2) {
+	width: 0;
+}
+.nav-toggle.active .icon-bar:nth-child(3) {
+	top: 24px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/* --------------------------------------------------
+Large Screen View
+-------------------------------------------------- */
+@media screen and (min-width:768px) {
+	nav.navigation {
+		display: flex;
+		justify-content: space-between;
+		position: fixed;
+		z-index: 1;
+	}
+	div.nav-toggle {
+		display: none;
+	}
+	ul.nav-menu {
+		margin-right: 20px;
+	}
+	ul.nav-menu, ul.nav-menu li {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 0;
+		width: auto;
+		height: 50px;
+	}
+	ul.nav-menu li a {
+		display: inline-block;
+		color: #555555 !important;
+		text-align: center;
+		height: 50px;
+		width: auto;
+		line-height: 50px;
+		padding: 0 20px;
+		color: #ffffff;
+		border-right: 1px solid rgba(69,65,64,.2);
+		-webkit-transition-duration: 0.3s;
+		-o-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+	}
+	ul.nav-menu li:last-child a {
+		border-right: none;
+	}
+	ul.nav-menu li a:hover {
+		color: #ffffff !important;
+	}
+	.nav-overlay, .nav-overlay.active {
+		display: none;
+	}
+}
+
+/* SITE CONTAINER */
+
+.site-container{
+	width:80%;
+	margin:5%;
+	padding:5%;
+	background-color: #ffffff;
+	font-size:16px;
+	font-weight:300;
+	line-height:20px;
+}
+.site-container p{
+	margin:10px 0;
+}
+
+img {
+	width: 500px;
+	margin: 0;
+	padding: 0; 
+}
