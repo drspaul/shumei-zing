@@ -50,14 +50,14 @@ nav {
   z-index: 2;
 }
 .nav-logo {
-  height: 50px;
-  line-height: 50px;
-  padding: 0 20px;
-  background-color: #ffffff;
   color: #555555;
   font-weight: 900;
   font-variant: small-caps;
   text-transform: none;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  background-color: transparent;
 }
 #wiggins {
   color: #c94c4c;
@@ -269,15 +269,23 @@ Large Screen View
 }
 #shumei-zing {
   font-family: "Shadows Into Light";
-  font-size: 5vw;
+  font-size: 6vw;
   font-weight: bold;
   font-variant: small-caps;
 }
 #welcome {
   font-family: "Swanky and Moo Moo";
-  font-size: 8vw;
+  font-size: 10vw;
   font-weight: bold;
   font-variant: small-caps;
+}
+@media screen and (min-width:768px) {
+  #shumei-zing {
+    font-size: 5vw;
+  }
+  #welcome {
+    font-size: 8vw;
+  }
 }
 
 /*--------------------------------------------------
