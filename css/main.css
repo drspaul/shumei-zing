@@ -35,6 +35,14 @@ p {
   line-height: 1.6;
   margin: 1em 0;
 }
+main a:hover:after {
+  content: "\f0c1";
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 5px;
+}
 
 /* --------------------------------------------------
 Navigation Initial Mobile View
@@ -71,7 +79,7 @@ nav {
   color: #555555;
 }
 #wiggins {
-  color: #ffa500;
+  color: #FF8400;
 }
 .nav-toggle {
   display: block;
@@ -364,24 +372,23 @@ Navigation Large Screen View
   font-size: 1.2rem;
   color: #c83349;
 }
-.credentialOrg a::before {
-  content: "";
-  background: #c83349;
-  border: 2px solid #c83349;
-  font-weight: bold;
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
+.credentialList li {
+  margin: .5em .5em .5em 2em;
+  font-style: italic;
+  position: relative;
+}
+.credentialList li:before {
+  content: "\f0da";
+  font-family: "FontAwesome";
   display: inline-block;
-  margin-right: 10px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #000;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  position: relative;
+  top: 0;
+  left: 0;
   vertical-align: middle;
 }
-
-.credentialList li {
-/*  line-height: 1.2;*/
-  margin: .5em .5em .5em 2em;
-  font-style: italic;: 
-}
-
-
-
