@@ -22,17 +22,18 @@ h3 {
   letter-spacing: 2px;
 }
 h4 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 h5 {
-  font-size:1.8rem;
+  font-size:1.5rem;
 }
 h6 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 p {
   font-size: 1.2rem;
   line-height: 1.6;
+  margin: 1em 0;
 }
 
 /* --------------------------------------------------
@@ -62,6 +63,12 @@ nav {
   line-height: 50px;
   padding: 0 20px;
   background-color: transparent;
+}
+.nav-logo a {
+  text-decoration: none;
+}
+#shumei {
+  color: #555555;
 }
 #wiggins {
   color: #ffa500;
@@ -161,11 +168,10 @@ Navigation Menu Toggle
   top: 0;
   right: 0;
   bottom: 0;
-  height: 100%;
   left: 0;
-  background-color: rgba(255,255,255,.81);
+  background-color: rgba(255,255,255,.8);
   z-index: 1;
-  opacity: 0;
+  opacity: .3;
   visibility: hidden;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -317,8 +323,11 @@ Navigation Large Screen View
 .flexDiv {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+}
+#about {
+  padding-top: 5%;
 }
 .divLeft, .divRight {
   padding: 2% 10%;
@@ -329,34 +338,50 @@ Navigation Large Screen View
   min-width: 308px;
   box-shadow: 15px 15px 10px -10px #777;
 }
-.divRight > div > h2 {
+/*.divRight > div > h2 {
   font-size: 1.5rem;
-}
+}*/
 @media screen and (min-width: 800px) {
   .flexDiv {
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
     text-align: left;
-    margin: 0 5%;
+    margin: 0 5vw;
+  }
+  #about {
+    padding-top: 5%;
   }
   .divLeft, .divRight {
     padding: 2%;
   }
 }
-#fullName {
-  font-size: 2.6rem;
-}
 
 /*--------------------------------------------------
 # Credentials
 --------------------------------------------------*/
-.flexDivColumn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+.credentialOrg > a {
+  font-size: 1.2rem;
+  color: #c83349;
 }
-.flexDivColumn li {
-  list-style-type: none;
+.credentialOrg a::before {
+  content: "";
+  background: #c83349;
+  border: 2px solid #c83349;
+  font-weight: bold;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
 }
+
+.credentialList li {
+/*  line-height: 1.2;*/
+  margin: .5em .5em .5em 2em;
+  font-style: italic;: 
+}
+
+
+
