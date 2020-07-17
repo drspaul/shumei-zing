@@ -315,7 +315,7 @@ Navigation Large Screen View
 --------------------------------------------------*/
 .flexDiv {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
