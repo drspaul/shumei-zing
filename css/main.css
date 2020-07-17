@@ -35,7 +35,7 @@ p {
   line-height: 1.6;
   margin: 1em 0;
 }
-main a:hover:after {
+main a:hover:after, main a:hover:focus {
   content: "\f0c1";
   display: inline-block;
   font-family: "FontAwesome";
