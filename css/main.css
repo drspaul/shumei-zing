@@ -1,12 +1,11 @@
-
-/*--------------------------------------------------
+/***************************************************
 # General
---------------------------------------------------*/
+***************************************************/
 html,
 body {
   color: #2b2626;
   font: 16px;
-  font-family: "Noto Sans", Roboto, sans-serif;
+  font-family: "Lato", "Noto Sans", Roboto, sans-serif;
   background-color: #ffffff;
 }
 h1 {
@@ -32,10 +31,17 @@ h6 {
 }
 p {
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 2;
   margin: 1em 0;
 }
-main a:hover:after, main a:hover:focus {
+main a:link, main a:visited {
+  color: #0086e6;
+}
+.nav-logo a:hover, .nav-logo a:focus, .nav-logo a:active {
+  text-decoration: underline;
+  text-decoration-color: #FF8400;
+}
+main a:hover:after, main a:focus:after, main a:active:after {
   content: "\f0c1";
   display: inline-block;
   font-family: "FontAwesome";
@@ -44,9 +50,9 @@ main a:hover:after, main a:hover:focus {
   padding-left: 5px;
 }
 
-/* --------------------------------------------------
-Navigation Initial Mobile View
--------------------------------------------------- */
+/***************************************************
+# Navigation Initial Mobile View
+***************************************************/
 nav {
   position: fixed;
   top: 0;
@@ -115,9 +121,9 @@ nav {
   background-color: #c83349;
 }
 
-/* --------------------------------------------------
-Navigation Menu Toggle
--------------------------------------------------- */
+/***************************************************
+# Navigation Menu Toggle
+***************************************************/
 .nav-menu {
   position: absolute;
   top: 50px;
@@ -190,9 +196,9 @@ Navigation Menu Toggle
   opacity: 1;
 }
 
-/* --------------------------------------------------
-Icon Bars Animation
--------------------------------------------------- */
+/***************************************************
+# Icon Bars Animation
+***************************************************/
 .nav-toggle.active .icon-bar:nth-child(1) {
   top: 24px;
   -webkit-transform: rotate(45deg);
@@ -209,9 +215,9 @@ Icon Bars Animation
   transform: rotate(-45deg);
 }
 
-/* --------------------------------------------------
-Navigation Large Screen View
--------------------------------------------------- */
+/***************************************************
+# Navigation Large Screen View
+***************************************************/
 @media screen and (min-width:768px) {
   .navigation {
     display: flex;
@@ -251,7 +257,7 @@ Navigation Large Screen View
   .nav-menu li:last-child a {
     border-right: none;
   }
-  .nav-menu li a:hover {
+  .nav-menu li a:hover, .nav-menu li a:focus, .nav-menu li a:active {
     color: #ffffff !important;
   }
   .nav-overlay, .nav-overlay.active {
@@ -259,21 +265,19 @@ Navigation Large Screen View
   }
 }
 
-/*--------------------------------------------------
+/***************************************************
 # Top Banner
---------------------------------------------------*/
-.banner {
+***************************************************/
+.bannerTop {
   position: relative;
   margin-top: 50px;
   height: 80vh;
   background-color: #ffffff;
-  background-position: 50% 50%;
+  background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0px 15px 10px -10px #777;
-}
-#bannerBcg-1 {
-  background-image: url("../img/banner.jpg");
+  background-image: url("../img/bannerTop.jpg");
 }
 .bnContainer {
   position: absolute;
@@ -282,7 +286,7 @@ Navigation Large Screen View
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom right, rgba(0,0,0,.3), rgba(0,0,0,.8));
+  background-image: linear-gradient(to bottom right, rgba(255,255,255,.5), rgba(255,255,255,.1));
 }
 .bnContent {
   display: flex;
@@ -292,22 +296,20 @@ Navigation Large Screen View
   bottom: 5%;
   text-align: left;
   width: 100%;
+  font-family: "Swanky and Moo Moo", cursive;
+  text-shadow: 2px 2px 4px #2b2626;
 }
 #shumei-zing {
-  color: #ffffff;
   font-family: "Shadows Into Light", cursive;
   font-size: 12vw;
   font-weight: 900;
   font-variant: small-caps;
-  text-shadow: 2px 2px 4px #2b2626;
 }
 #welcomeMsg {
-  color: #ffffff;
-  font-family: "Swanky and Moo Moo", cursive;
   font-size: 7vw;
   font-variant: normal;
   font-weight: 600;
-  text-shadow: 2px 2px 4px #2b2626;
+  letter-spacing: 2px;
 }
 @media screen and (min-width:768px) {
   #shumei-zing {
@@ -318,16 +320,16 @@ Navigation Large Screen View
   }
 }
 
-/*--------------------------------------------------
+/***************************************************
 # Main
---------------------------------------------------*/
+***************************************************/
 .mainContent {
   margin-top: 6vh;
 }
 
-/*--------------------------------------------------
+/***************************************************
 # About
---------------------------------------------------*/
+***************************************************/
 .flexDiv {
   display: flex;
   flex-direction: column;
@@ -346,10 +348,7 @@ Navigation Large Screen View
   min-width: 308px;
   box-shadow: 15px 15px 10px -10px #777;
 }
-/*.divRight > div > h2 {
-  font-size: 1.5rem;
-}*/
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .flexDiv {
     flex-direction: row;
     align-items: flex-start;
@@ -365,19 +364,155 @@ Navigation Large Screen View
   }
 }
 
-/*--------------------------------------------------
-# Credentials
---------------------------------------------------*/
-.credentialOrg > a {
-  font-size: 1.2rem;
-  color: #c83349;
+/***************************************************
+# Specialities
+***************************************************/
+.boxWrapper {
+  position: relative;
+  margin: 0 3%;  
 }
-.credentialList li {
-  margin: .5em .5em .5em 2em;
+.sectionTitle {
+  color: orange;
+  font-size: 2rem;
+  letter-spacing: .5rem;
+/*  text-decoration: underline;*/
+/*  text-decoration-color: orange;*/
+  margin: 0 0 2% 5%;
+  font-weight: 900;
+}
+.sectionTitle::after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: green;
+  display: block;
+  margin: 1vh 0;
+}
+
+@media screen and (min-width: 768px) {
+  .boxWrapper h2 {
+    margin: 0 2% 2%; 
+    text-align: center;
+  }
+  .sectionTitle::after {
+    content: "";
+    width: 10vw;
+    height: 5px;
+    background-color: green;
+    display: block;
+    margin: 1vh auto;
+  }
+}
+.boxOuter {
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  margin: 0 5%;
+}
+.boxInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80vw;
+  height: 40vh;
+  background-color: transparent;
+  margin: 1%;
+}
+.boxImg {
+  width: 80vw;
+  height: 35vh;
+  background-position: 50%;
+  background-size: cover;
+  background-color: transparent;
+  box-shadow: 15px 15px 10px -10px #777;
+}
+#boxImg-1 {
+  background-image: url("../img/boximg-1.jpg");
+}
+#boxImg-2 {
+  background-image: url("../img/boximg-2.jpg");
+}
+#boxImg-3 {
+  background-image: url("../img/boximg-3.jpg");
+}
+#boxImg-4 {
+  background-image: url("../img/boximg-4.jpg");
+}
+.boxList h4 {
+  font-size: calc(12px + 1.6vw);
+  padding-top: 10%;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .boxOuter {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .boxImg {
+    width: 20vw;
+    height: 25vh;
+  }
+  .boxList h4 {
+    font-size: calc(12px + 1.2vw);
+    padding-top: 5%;
+    text-align: center;
+  }
+}
+
+/***************************************************
+# Credentials
+***************************************************/
+.textWrapper {
+  align-items: flex-start; 
+  margin: 3%;
+}
+.reverse {
+  color: orange;
+  text-decoration-color: gray;
+  font-weight: 600;
+}
+.textWrapper .boxOuter, .textWrapper .boxOuter .boxInner {
+  align-items: flex-start; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.textWrapper .boxOuter .boxInner {
+  padding: 0 3%;
+}
+.listHead {
+  font-size: 1.2rem;
+  padding-left: 2%;
+}
+@media screen and (min-width:768px) {
+  .listHead {
+    padding-left: 0; 
+  }
+}
+.listItem li {
+  text-align: left;
+  margin: .5em 0 .5em 2em;
   font-style: italic;
   position: relative;
 }
-.credentialList li:before {
+.listItem li:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+  left: -9px;
+  top: 0;
+  background: #2b2626;
+
+/*
   content: "\f0da";
   font-family: "FontAwesome";
   display: inline-block;
@@ -385,10 +520,125 @@ Navigation Large Screen View
   font-weight: normal;
   text-decoration: inherit;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-right: 5px;
   position: relative;
   top: 0;
   left: 0;
+  vertical-align: middle;*/
+}
+
+/***************************************************
+# Banners Between
+***************************************************/
+.bannerBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+  height: 50vh;
+  background-color: #fff;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 15px 10px -10px #777;
+}
+#bannerBcg-1 {
+  background-image: url("../img/banner-1.jpg");
+}
+#bannerBcg-2 {
+  background-image: url("../img/banner-2.jpg");
+}
+#bannerBcg-3 {
+  background-image: url("../img/banner-3.jpg");
+  background-position: 50%;
+}
+.bnbContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, rgba(0,0,0,.3), rgba(0,0,0,.8));
+}
+.bnbContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  line-height: 9vh;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #2b2626;
+}
+#healthyFeet {
+  font-family: "IM Fell Great Primer", cursive;
+  font-size: calc(12px + 3vw);
+}
+@media screen and (min-width:768px) {
+  .bnbContent {
+    width: 80%;
+  }
+}
+
+/***************************************************
+# Service
+***************************************************/
+table, thead, tbody, tr, th, td {
+  border: 1px solid gray;
+  margin: 3%; 
+}
+
+/***************************************************
+# Safety Measures
+***************************************************/
+#safety .listItem li {
+  font-size: 1.2rem;
+  line-height: 2;
+  font-style: normal;
+}
+#safety .listItem li:hover {
+  font-weight: 700;
+}
+#safety .listItem li:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   vertical-align: middle;
+  left: -9px;
+  top: 0;
+  background: #2b2626;
+}
+
+/***************************************************
+# Policies
+***************************************************/
+#policies summary {
+  font-size: 1.2rem;
+  line-height: 2;
+  font-weight: 700;
+}
+#policies summary:hover, #policies summary:focus, #policies summary:active {
+  cursor: pointer;
+  color: orange;
+}
+#policies p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding-left: 3%;
+}
+#policies strong {
+  font-weight: 700;
 }
