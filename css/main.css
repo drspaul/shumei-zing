@@ -263,9 +263,9 @@ nav {
   .nav-menu li a:hover, .nav-menu li a:focus, .nav-menu li a:active {
     color: #ffffff !important;
   }
-  .nav-overlay, .nav-overlay.active {
+/*  .nav-overlay, .nav-overlay.active {
     display: none;
-  }
+  }*/
 }
 
 /***************************************************
