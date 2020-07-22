@@ -5,20 +5,17 @@ html,
 body {
   color: #2b2626;
   font: 16px;
-  font-family: "Lato", "Noto Sans", "Roboto", sans-serif;
+  font-family: "Noto Sans", "Lato", "Roboto", sans-serif;
   background-color: #ffffff;
 }
 h1 {
   font-size: 3rem;
-  letter-spacing: 4px;
 }
 h2 {
   font-size: 2.6rem;
-  letter-spacing: 3px;
 }
 h3 {
   font-size: 2.2rem;
-  letter-spacing: 2px;
 }
 h4 {
   font-size: 1.8rem;
@@ -48,6 +45,9 @@ main a:hover:after, main a:focus:after, main a:active:after {
   font-style: normal;
   font-weight: normal;
   padding-left: 5px;
+}
+.anchor:hover:after, .anchor:focus:after, .anchor:active:after {
+  display: none;
 }
 
 /***************************************************
@@ -144,12 +144,12 @@ nav {
 .nav-menu li a {
   display: block;
   width: 100vw;
-  height: 15vh;
+  height: 12vh;
   padding: 0;
   font-size: 5vw;
   text-align: center;
   text-decoration: none;
-  line-height: 15vh;
+  line-height: 12vh;
   color: #454140FF;
   border-bottom: 1px solid rgba(69,65,64,.2);
 }
@@ -180,13 +180,13 @@ nav {
 .nav-menu li a:focus {
   outline: none;
 }
-/*.nav-overlay {
+.nav-overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255,255,255,.8);
+  background-color: rgba(255,255,255,.5);
   z-index: 1;
   opacity: .3;
   visibility: hidden;
@@ -197,7 +197,7 @@ nav {
 .nav-overlay.active {
   visibility: visible;
   opacity: 1;
-}*/
+}
 
 /***************************************************
 # Icon Bars Animation
@@ -231,9 +231,6 @@ nav {
   .nav-toggle {
     display: none;
   }
-/*  .nav-menu {
-    margin-right: 20px;
-  }*/
   .nav-menu, .nav-menu li {
     display: flex;
     justify-content: center;
@@ -295,18 +292,19 @@ nav {
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 5%;
-  bottom: 5%;
-  text-align: left;
   width: 100%;
+  bottom: 50%;
+  text-align: center;
   font-family: "Swanky and Moo Moo", cursive;
   text-shadow: 2px 2px 4px #2b2626;
+  padding: 0 2%;
 }
 #shumei-zing {
   font-family: "Shadows Into Light", cursive;
   font-size: 12vw;
   font-weight: 900;
   font-variant: small-caps;
+  padding-bottom: 15px;
 }
 #welcomeMsg {
   font-size: 7vw;
@@ -315,6 +313,11 @@ nav {
   letter-spacing: 2px;
 }
 @media screen and (min-width:768px) {
+  .bnContent {
+    left: 2%;
+    bottom: 5%;
+    text-align: left;
+  }
   #shumei-zing {
     font-size: 10vw;
   }
@@ -340,8 +343,10 @@ nav {
   align-items: center;
   text-align: center;
 }
-#about {
-  padding-top: 5%;
+.anchor {
+  display:block;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .divLeft, .divRight {
   padding: 2% 10%;
@@ -351,6 +356,7 @@ nav {
   max-height: 70vh;
   min-height: 30vh;
   box-shadow: 15px 15px 10px -10px #777;
+  margin-top: 5%;
 }
 @media screen and (min-width: 768px) {
   .flexDiv {
@@ -358,9 +364,6 @@ nav {
     align-items: flex-start;
     justify-content: center;
     margin: 0 5vw;
-  }
-  #about {
-    padding-top: 5%;
   }
   .divLeft, .divRight {
     padding: 2%;
@@ -370,57 +373,51 @@ nav {
 /***************************************************
 # Specialities
 ***************************************************/
-.boxWrapper {
-  position: relative;
-  margin: 0 3%;  
-}
 .sectionTitle {
   color: orange;
   font-size: 2rem;
-  letter-spacing: .5rem;
+  font-variant: small-caps;
   margin: 5% 0 2% 5%;
   font-weight: 900;
 }
 .sectionTitle::after {
   content: "";
   width: 100px;
-  height: 5px;
-  background-color: green;
+  height: 2px;
+  background-color: gray;
   display: block;
   margin: 1vh 0;
 }
 @media screen and (min-width: 768px) {
-  .boxWrapper h2 {
-    margin: 0 2% 2%; 
+  .sectionTitle {
     text-align: center;
+    margin: 2% auto;
   }
   .sectionTitle::after {
-    content: "";
     width: 10vw;
-    height: 5px;
-    background-color: green;
-    display: block;
     margin: 1vh auto;
   }
 }
+.specialties {
+  position: relative;
+  margin: 0 3%;  
+}
 .boxOuter {
   display: flex;
-  background-color: transparent;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: flex-start;
   height: auto;
-  margin: 0 5%;
+  margin: 0 2%;
+  background-color: transparent;
 }
 .boxInner {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  width: 80vw;
-  height: 40vh;
+  justify-content: flex-start;
+  width: 90vw;
   background-color: transparent;
-  margin: 1%;
 }
 .boxImg {
   width: 80vw;
@@ -429,68 +426,56 @@ nav {
   background-size: cover;
   background-color: transparent;
   box-shadow: 15px 15px 10px -10px #777;
+  margin-top: 5%;
 }
 #boxImg-1 {
   background-image: url("../img/boximg-1.jpg");
+  background-position: 50% 80%;
 }
 #boxImg-2 {
   background-image: url("../img/boximg-2.jpg");
+  background-position: 50% 60%;
 }
 #boxImg-3 {
   background-image: url("../img/boximg-3.jpg");
 }
 #boxImg-4 {
   background-image: url("../img/boximg-4.jpg");
+  background-position: 50% 75%;
 }
 .boxList h4 {
-  font-size: calc(12px + 1.6vw);
-  padding-top: 10%;
-  text-align: center;
-}
-.boxList h4:hover {
   font-size: calc(12px + 2vw);
-  text-shadow: 2px 2px 4px #2b2626;
+  padding: 10px 20px 0;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .boxOuter {
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
   }
   .boxImg {
-    width: 20vw;
-    height: 25vh;
+    width: 40vw;
+    height: 35vh;
   }
   .boxList h4 {
     font-size: calc(12px + 1.2vw);
     padding-top: 5%;
     text-align: center;
   }
-  .boxList h4:hover {
-    font-size: calc(12px + 1.5vw);
-  }
 }
 
 /***************************************************
 # Credentials
 ***************************************************/
-.textWrapper {
-  align-items: flex-start; 
-  margin: 3%;
+#credentials {
+  color: gray;
+  font-size: 1.5rem;
 }
-.reverse {
-  color: orange;
-  text-decoration-color: gray;
-  font-weight: 600;
-}
-.textWrapper .boxOuter, .textWrapper .boxOuter .boxInner {
-  align-items: flex-start; 
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-.textWrapper .boxOuter .boxInner {
-  padding: 0 3%;
+.credentials .boxInner {
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 3%;
 }
 .listHead {
   font-size: 1.2rem;
@@ -518,21 +503,6 @@ nav {
   left: -9px;
   top: 0;
   background: #2b2626;
-
-/*
-  content: "\f0da";
-  font-family: "FontAwesome";
-  display: inline-block;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-  color: #000;
-  font-size: 1rem;
-  margin-right: 5px;
-  position: relative;
-  top: 0;
-  left: 0;
-  vertical-align: middle;*/
 }
 
 /***************************************************
@@ -547,20 +517,22 @@ nav {
   margin-top: 30px;
   height: 50vh;
   background-color: #fff;
-  background-position: 50% 70%;
+  background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0px 15px 10px -10px #777;
 }
 #bannerBcg-1 {
   background-image: url("../img/banner-1.jpg");
+  background-position: 50% 80%;
 }
 #bannerBcg-2 {
   background-image: url("../img/banner-2.jpg");
+/*  background-position: 50% 30%;*/
 }
 #bannerBcg-3 {
   background-image: url("../img/banner-3.jpg");
-  background-position: 50%;
+/*  background-position: 50%;*/
 }
 .bnbContainer {
   display: flex;
@@ -586,12 +558,12 @@ nav {
   position: absolute;
   text-align: center;
   color: #fff;
-  line-height: 9vh;
-  font-weight: 900;
+  line-height: 10vh;
+  font-weight: 700;
+  margin: auto 5%;
   text-shadow: 2px 2px 4px #2b2626;
 }
 .healthyFeet {
-  font-family: "IM Fell Great Primer", cursive;
   font-size: calc(12px + 3vw);
 }
 @media screen and (min-width:768px) {
@@ -603,63 +575,101 @@ nav {
 /***************************************************
 # Service
 ***************************************************/
-table, thead, tbody, tr, th, td {
-  border: 1px solid gray;
-  margin: 3%; 
+.service .boxInner {
+  align-items: flex-start;
+  width: 80vw;
+  margin-bottom: 5%;
 }
+@media screen and (min-width:768px) {
+  .service {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .service .boxInner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 3%;
+  }
+}
+.serviceMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 1px solid gray; 
+}
+.serviceItem, .servicePrice {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0;
+  font-variant: small-caps;
+}
+.serviceDetail {
+  font-size: .8rem;
+  line-height: 1.2;
+  margin: 0;
+  padding-top: 1%;
+}
+.serviceDetail span {
+  font-weight: 600;
+}
+
 
 /***************************************************
 # Safety Measures
 ***************************************************/
-#safety .listItem li {
+.safety li {
   font-size: 1.2rem;
   line-height: 2;
   font-style: normal;
 }
-#safety .listItem li:hover {
-  font-weight: 700;
+.safety li:hover {
+  color: orange;
 }
-#safety .listItem li:before {
-  content: "";
-  position: relative;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  vertical-align: middle;
-  left: -9px;
-  top: 0;
-  background: #2b2626;
+@media screen and (min-width:768px) {
+  .safety li {
+    font-size: 1.2rem;
+    line-height: 2;
+    font-style: normal;
+    margin-left: 0;
+  }
 }
 
 /***************************************************
 # Policies
 ***************************************************/
-#policies summary {
+.policy .boxInner {
+  align-items: flex-start;
+  padding-left: 5%;
+}
+.policy .boxInner details:last-child {
+  margin-bottom: 70px;
+}
+.policy summary {
   font-size: 1.2rem;
   line-height: 2;
   font-weight: 700;
 }
-#policies summary:hover, #policies summary:focus, #policies summary:active {
+.policy summary:hover, .policy summary:focus, #policies summary:active {
   cursor: pointer;
   color: orange;
 }
-#policies p {
+.policy p {
   font-size: 1.2rem;
   line-height: 1.6;
   padding-left: 3%;
 }
-#policies strong {
+.policy strong {
   font-weight: 700;
 }
 
 /***************************************************
 # Contact
 ***************************************************/
-#contact .boxOuter, #contact .boxInner {
-  margin: 0;
-  padding: 0; 
-}
 .address {
   display: flex;
   flex-direction: column;
@@ -667,12 +677,12 @@ table, thead, tbody, tr, th, td {
   align-items: flex-start;
   font-size: 1rem;
   line-height: 2;
-  margin: 5% 0;
+  margin: 3% auto;
 }
 .address > li {
-  width: 90vw;
   display: flex;
   flex-direction: row;
+  width: 80vw;
   margin-bottom: 5%; 
 }
 .addTitle {
@@ -682,16 +692,16 @@ table, thead, tbody, tr, th, td {
   text-align: right;
 }
 .addItem {
+  font-size: 1.2rem;
   width: 70%;
   padding-left: 2%;
-  border-left: 2px solid gray;
+  border-left: 1px solid gray;
 }
 @media screen and (min-width:768px) {
   .address {
     flex-direction: row;
-    width: 90vw;
-    justify-content: space-between;
-    margin: 0 auto;
+    justify-content: center;
+    width: 85vw;
   }
   .address > li {
     flex-direction: column;
@@ -702,18 +712,17 @@ table, thead, tbody, tr, th, td {
     text-align: center;
   }
   .addItem {
-    height: 20vh;
-    border-right: 2px solid gray;
+    border-right: 1px solid gray;
     border-left: none;
   }
   .address li:last-child .addItem {
     border-right: none;
   }
 }
-#contact iframe {
-  width: 90vw;
-  height: 60vh;
-  margin: 0 auto;
+.contact iframe {
+  width: 85vw;
+  height: 80vh;
+  margin-bottom: 5%;
   box-shadow: 15px 15px 10px -10px #777;
 }
 
