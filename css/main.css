@@ -170,7 +170,7 @@ nav {
   background-color: rgba(178,194,191,1);
 }
 .nav-menu li:nth-child(6) a {
-  background-color: rgba(69,65,64,.2);
+  background-color: rgba(240,240,240,1);
 }
 .nav-menu li a:hover, .nav-menu li a:focus {
   color: #ffffff;
@@ -180,7 +180,7 @@ nav {
 .nav-menu li a:focus {
   outline: none;
 }
-.nav-overlay {
+/*.nav-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -197,7 +197,7 @@ nav {
 .nav-overlay.active {
   visibility: visible;
   opacity: 1;
-}
+}*/
 
 /***************************************************
 # Icon Bars Animation
