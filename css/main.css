@@ -5,7 +5,7 @@ html,
 body {
   color: #2b2626;
   font: 16px;
-  font-family: "Lato", "Noto Sans", Roboto, sans-serif;
+  font-family: "Lato", "Noto Sans", "Roboto", sans-serif;
   background-color: #ffffff;
 }
 h1 {
@@ -228,9 +228,9 @@ nav {
   .nav-toggle {
     display: none;
   }
-  .nav-menu {
+/*  .nav-menu {
     margin-right: 20px;
-  }
+  }*/
   .nav-menu, .nav-menu li {
     display: flex;
     justify-content: center;
@@ -247,7 +247,7 @@ nav {
     height: 50px;
     width: auto;
     line-height: 50px;
-    padding: 0 20px;
+    padding: 0 15px;
     color: #ffffff;
     border-right: 1px solid rgba(69,65,64,.2);
     -webkit-transition-duration: 0.3s;
@@ -335,6 +335,7 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  text-align: center;
 }
 #about {
   padding-top: 5%;
@@ -344,8 +345,8 @@ nav {
 }
 .divLeft > img {
   display: flex;
-  max-width: 100%;
-  min-width: 308px;
+  max-height: 70vh;
+  min-height: 30vh;
   box-shadow: 15px 15px 10px -10px #777;
 }
 @media screen and (min-width: 768px) {
@@ -353,7 +354,6 @@ nav {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    text-align: left;
     margin: 0 5vw;
   }
   #about {
@@ -375,9 +375,7 @@ nav {
   color: orange;
   font-size: 2rem;
   letter-spacing: .5rem;
-/*  text-decoration: underline;*/
-/*  text-decoration-color: orange;*/
-  margin: 0 0 2% 5%;
+  margin: 5% 0 2% 5%;
   font-weight: 900;
 }
 .sectionTitle::after {
@@ -388,7 +386,6 @@ nav {
   display: block;
   margin: 1vh 0;
 }
-
 @media screen and (min-width: 768px) {
   .boxWrapper h2 {
     margin: 0 2% 2%; 
@@ -447,6 +444,10 @@ nav {
   padding-top: 10%;
   text-align: center;
 }
+.boxList h4:hover {
+  font-size: calc(12px + 2vw);
+  text-shadow: 2px 2px 4px #2b2626;
+}
 @media screen and (min-width: 768px) {
   .boxOuter {
     flex-direction: row;
@@ -460,6 +461,9 @@ nav {
     font-size: calc(12px + 1.2vw);
     padding-top: 5%;
     text-align: center;
+  }
+  .boxList h4:hover {
+    font-size: calc(12px + 1.5vw);
   }
 }
 
@@ -568,6 +572,9 @@ nav {
   left: 0;
   background-image: linear-gradient(to bottom right, rgba(0,0,0,.3), rgba(0,0,0,.8));
 }
+.bnbContainer:hover {
+  background-image: none;
+}
 .bnbContent {
   display: flex;
   flex-direction: column;
@@ -580,7 +587,7 @@ nav {
   font-weight: 900;
   text-shadow: 2px 2px 4px #2b2626;
 }
-#healthyFeet {
+.healthyFeet {
   font-family: "IM Fell Great Primer", cursive;
   font-size: calc(12px + 3vw);
 }
@@ -641,4 +648,80 @@ table, thead, tbody, tr, th, td {
 }
 #policies strong {
   font-weight: 700;
+}
+
+/***************************************************
+# Contact
+***************************************************/
+#contact .boxOuter, #contact .boxInner {
+  margin: 0;
+  padding: 0; 
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  line-height: 2;
+  margin: 5% 0;
+}
+.address > li {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5%; 
+}
+.addTitle {
+  padding-right: 2%;
+  width: 30%;
+  font-weight: 700;
+  text-align: right;
+}
+.addItem {
+  width: 70%;
+  padding-left: 2%;
+  border-left: 2px solid gray;
+}
+@media screen and (min-width:768px) {
+  .address {
+    flex-direction: row;
+    width: 90vw;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .address > li {
+    flex-direction: column;
+   }
+  .addTitle, .addItem {
+    width: 30vw;
+    padding-right: 0;
+    text-align: center;
+  }
+  .addItem {
+    height: 20vh;
+    border-right: 2px solid gray;
+    border-left: none;
+  }
+  .address li:last-child .addItem {
+    border-right: none;
+  }
+}
+#contact iframe {
+  width: 90vw;
+  height: 60vh;
+  margin: 0 auto;
+  box-shadow: 15px 15px 10px -10px #777;
+}
+
+/***************************************************
+# Footer
+***************************************************/
+footer div {
+  height: 10vh;
+  line-height: 10vh;
+  background-color: transparent;
+  text-align: center;
+  font-variant: small-caps; 
+  background-color: orange;
 }
