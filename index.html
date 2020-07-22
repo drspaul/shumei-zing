@@ -8,11 +8,12 @@
   <meta name="author" content="Shuli Paul">
   <meta name="description" content="Shumei Wiggins, aka Shumei-zing Nails, provides wellness-focused nail services.">
   <meta name="keywords" content="Pedicure, Menicure, Nail Art, Nail Salon, Diabetic Manicure, Thick Toenails">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Bebas+Neue&family=Noto+Sans:wght@400;700&family=Roboto&family=Shadows+Into+Light&family=Swanky+and+Moo+Moo&family=Fredoka+One&family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
 <!--   <link rel="shortcut icon" type="image/png" href=""> -->
 	<script src="https://use.fontawesome.com/2861b2669f.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+<!-- 	<link rel="stylesheet" href="icon/font-awesome-4.7.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -35,10 +36,11 @@
 			</div>
 			<ul class="nav-menu">
 				<li><a href="#about">About</a></li>
+				<li><a href="#specialties">Specialties</a></li>
 				<li><a href="#service">Service</a></li>
 				<li><a href="#safety">Safety Measures</a></li>
 				<li><a href="#policies">Policies</a></li>
-				<li><a href="">Contact</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 		<div class="nav-overlay"></div>		<!-- ============ End Navigation ============  -->
@@ -73,7 +75,7 @@
 		</section>  <!-- =========== End About =========== -->
 
 		<!-- ============ Speciality ============ -->
-		<section class="boxWrapper">
+		<section class="boxWrapper" id="specialties">
 			<h2 class="sectionTitle">SPECIALTIES</h2>
 			<div class="boxOuter">
 				<div class="boxInner">
@@ -327,22 +329,22 @@
 				<h2 class="sectionTitle">POLICIES</h2>
 				<div class="boxOuter">
 					<div class="boxInner">
-						<details open>
+						<details>
 				      <summary>Appointments</summary>
 				      <p>Appointments are highly recommended to better ensure staff availability. To schedule an appointment, text us at <a href="tel:+12817399138">281.739.9138</a>. The more time we are given in advance, the more likely we will be able to accommodate your date request.</p>
 				    </details>
 
-				    <details open>
+				    <details>
 				      <summary>Walk-ins</summary>
 				      <p>Walk-ins and same-day appointments may be available but are not guaranteed. To schedule an appointment and to check our availability, text us at <a href="tel:+12817399138">281.739.9138</a>.</p>
 				    </details>
 
-				    <details open>
+				    <details>
 				      <summary>Confirmations</summary>
 				      <p>As a courtesy, we will send a text to confirm your service appointments one day before your appointment date. If we have not received a text response, we will attempt a phone call. If we are unable to reach you, and can only leave a message, please understand that it is your responsibility to remember your appointment dates and times to avoid late arrivals, missed appointments, and the cancellation fee.</p>
 				    </details>
 
-				    <details open>
+				    <details>
 				      <summary>Cancellations, Re-schedule, No-show</summary>
 				      <p>Your appointments are very important to us. Each appointment is reserved especially for you. We do understand that sometimes schedule adjustments are necessary; therefore, we respectfully request <strong>24 hours’</strong> notice for adjustments to your appointments and for cancellations.</p>
 				      <p>Please understand that when you forget or cancel your appointment without giving enough notice, we miss the opportunity to fill that appointment time, and clients on our waiting list miss the opportunity to receive services. Our appointments are confirmed one day in advance because we know it is possible to forget an appointment you booked months ago. Since the appointment is reserved especially for you, <strong>same day cancellations</strong>, <strong>re-schedule</strong> or <strong>no-show</strong> will be charged full price of the scheduled service.</p>
@@ -350,7 +352,7 @@
 				      </p>
 				    </details>
 
-				    <details open>
+				    <details>
 				      <summary>Late Arrivals</summary>
 				      <p> As a courtesy to all clients scheduled throughout the day, on-time arrival is expected.</p>
 				      <p>To remain on schedule for all our clients, we may shorten your service time if you arrive more than <strong>15 minutes</strong> late for your appointment. The service price will be charged in full.</p>
@@ -358,18 +360,18 @@
 				      <p>Any “late” arrival will be documented under your client file. Repetitive behaviors may result in prepayment requirement for future appointments.</p>
 				    </details>
 
-				    <details open>
+				    <details>
 				      <summary>Refusal of Service</summary>
 				      <p>We have the right to refuse service to anyone at any time with <strong>no refund</strong>. This includes but is not limited to the usage of drugs, alcohol, sexual comments/remarks, or any unacceptable and disruptive behavior that we feel is inappropriate. As licensed professionals, we follow a strict code of ethics. It is important that a safe environment is maintained for us and each of our clients.</p>
 				    </details>
 
-				    <details open>
+				    <details>
 				      <summary>Gift Certificates</summary>
 				      <p>Gift certificates are available for purchase. Certificates are non-refundable and ONLY good for Shumei's services, not products or gratuity.
 				      </p>
 				    </details>
 
-				    <details open>
+				    <details>
 				      <summary>Payments</summary>
 				      <p>We happily accept cash, checks, Shumei's gift certificates, and all major credit cards including Visa, MasterCard, and Discover.</p>
 				    </details>
@@ -378,24 +380,47 @@
 			</div>
 		</section>  <!-- =========== End Policies =========== -->
 
-		<section id="contact">
-			<div class="boxWrapper textWrapper">
-				<h2 class="sectionTitle">CONTACT</h2>	
-			    <address>
-			      <ul>
-			        <li>Call Us: <a href="tel:+12817399138">(281) 739-9138</a>, <a href="tel:+12815421400">(281) 542-1400</a></li>
-			        <li>Address: 2808 Center St., Deer Park, Texas (Salon Mia Bella)</li>
-			        <li>Opening Hours:
-			          <ul>
-			            <li>TUE – FRI | 9:00 am – 5:00 pm</li>
-			            <li>SAT | 9:00 am – 3:00 pm</li>
-			            <li>SUN – MON | Closed</li>
-			          </ul>
-			        </li>
-			      </ul>
-			    </address>
+		<section>
+			<div class="boxWrapper textWrapper" id="contact">
+				<h2 class="sectionTitle">CONTACT</h2>
+				<div class="boxOuter">
+					<div class="boxInner">
+						<address>
+				      <ul class="address">
+                <li>
+                    <h6 class="addTitle">PHONE</h6>
+                    <ul class="addItem">
+						      		<li><a href="tel:+12817399138">(281) 739-9138</a></li>
+						      		<li><a href="tel:+12815421400">(281) 542-1400</a></li>
+					      		</ul>
+                </li>
+                <li>
+                    <h6 class="addTitle">LOCATION</h6>
+                    <ul class="addItem"><a href="https://goo.gl/maps/PyKiPeCdVT3tcebbA">
+                    	<li>2808 Center Street</li>
+                    	<li>Deer Park, TX 77536</li></a>
+                    </ul>
+                </li>
+                <li>
+                    <h6 class="addTitle">HOURS</h6>
+                    <ul class="addItem">
+	                    <li>TUE – FRI | 9:00 am – 5:00 pm</li>
+	                    <li>SAT | 9:00 am – 3:00 pm</li>
+	                    <li>SUN – MON | Closed</li>
+	                  </ul>
+                </li>
+	            </ul>
+				    </address>
+				    <iframe 
+							title="Find Shumei-zing Nails @Salon Mia Bella on Google Map" 
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.1413045985855!2d-95.12349701442588!3d29.68668265591324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409f5fca93a6fb%3A0x4eee4d7c8558ff5c!2sSalon%20Mia%20Bella!5e0!3m2!1sen!2sus!4v1595358006805!5m2!1sen!2sus"
+							aria-hidden="true"
+							tabindex="0">
+						</iframe>
+				  </div>
+				</div>
 		  </div>
-	  </section>
+		</section>
 
 
 	</main>
@@ -403,8 +428,10 @@
 
 
 
-	<footer style="text-align: center; padding: 5%;">
-		Copyright&nbsp;&copy;&nbsp;2020 Shumei Wiggins;&nbsp;all&nbsp;rights&nbsp;reserved
+	<footer>
+		<div>
+			<h6>Copyright&nbsp;&copy;&nbsp;2020 Shumei Wiggins;&nbsp;all&nbsp;rights&nbsp;reserved.</h6>
+		</div>
 	</footer>
 
 
