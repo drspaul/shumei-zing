@@ -32,7 +32,7 @@ p {
   margin: 1em 0;
 }
 main a:link, main a:visited {
-  color: #0086e6;
+  color: #3e4444;
 }
 .nav-logo a:hover, .nav-logo a:focus, .nav-logo a:active {
   text-decoration: underline;
